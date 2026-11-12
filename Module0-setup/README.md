@@ -160,6 +160,24 @@ Fix : Ran az lock delete --name lock-test --resource-group rg-test1, then delete
 
 ![screenshots](screenshots/22.png)
 
+Through Azure portal:
+
+Unable to delete resource group because of lock:
+![screenshots](screenshots/40.png)
+
+Delete lock:
+![screenshots](screenshots/41.png)
+
+Lock deleted:
+![screenshots](screenshots/42.png)
+
+Delete resource group:
+![screenshots](screenshots/43.png)
+
+Resource group ab deleted successfully:
+![screenshots](screenshots/44.png)
+
+![screenshots](screenshots/45.png)
 
 ## What I learned
 - The Azure hierarchy is management group, subscription, resource group, resource.
