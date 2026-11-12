@@ -10,17 +10,45 @@ Create, connect to, and troubleshoot Linux and Windows virtual machines in Azure
 ## Steps
 ### Portal VM
 ![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/2.png)
+![screenshots](screenshots/3.png)
+![screenshots](screenshots/4.png)
+![screenshots](screenshots/5.png)
+![screenshots](screenshots/6.png)
+![screenshots](screenshots/7.png)
+![screenshots](screenshots/8.png)
+![screenshots](screenshots/9.png)
+![screenshots](screenshots/10.png)
+![screenshots](screenshots/11.png)
+![screenshots](screenshots/12.png)
+![screenshots](screenshots/13.png)
+![screenshots](screenshots/14.png)
+![screenshots](screenshots/15.png)
+
+Verify Azure VM connection in cloud shell(Bash):-
+![screenshots](screenshots/16.png)
+![screenshots](screenshots/17.png)
+
+Verify connection through Run command:-
+![screenshots](screenshots/18.png)
+Run Commands runs a command on the VM without connecting.
+
+Verify connection through serial console:-
+![screenshots](screenshots/19.png)
+serial console is how you reach a VM when SSH or networking is broken.
+
+Connect it from your own computer's terminal using Windows Powershell:-
+![screenshots](screenshots/20.png)
+
+Add inbound security rule for RDP service:-
+![screenshots](screenshots/21.png)
+![screenshots](screenshots/22.png)
+
+Network Watcher:-
+Verify if RDP server has access allowed through IP flow verify
+![screenshots](screenshots/network_watcher_to_verify_RDP.png)
+![screenshots](screenshots/network_watcher_verified_RDP.png)
+
 ### CLI VM
 Script: [create-linux-vm.sh](scripts/create-linux-vm.sh)
 ![CLI create](screenshots/04-cli-vm-create.png)
