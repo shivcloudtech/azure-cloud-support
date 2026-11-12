@@ -64,15 +64,19 @@ az group show -n rg-test2 -o table
 
  Create and tag a resource group through Azure Portal
 
- ![screenshots](screenshots/23.png)
+ ![screenshots](screenshots/33.png)
 
- ![screenshots](screenshots/23.png)
+ ![screenshots](screenshots/34.png)
 
- ![screenshots](screenshots/23.png)
+ ![screenshots](screenshots/35.png)
 
- ![screenshots](screenshots/23.png)
+ ![screenshots](screenshots/36.png)
 
- ![screenshots](screenshots/23.png)
+ ![screenshots](screenshots/37.png)
+
+ ![screenshots](screenshots/38.png)
+
+ ![screenshots](screenshots/39.png)
 
 ### 5. Delete resource group through CLI
 ```
