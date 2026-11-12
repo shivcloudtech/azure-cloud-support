@@ -55,18 +55,45 @@ az account show -o table
 List subscriptions and resource groups:
 ![screenshots](screenshots/15.png)
 
-### 4. Create and tag a resource group
+### 4. Create and tag a resource group through CLI
 ```
 az group create -n rg-test2 -l canadacentral --tags purpose=portfolio module=0
 az group show -n rg-test2 -o table
 ```
 ![screenshots](screenshots/23.png)
 
+ Create and tag a resource group through Azure Portal
+
+ ![screenshots](screenshots/23.png)
+
+ ![screenshots](screenshots/23.png)
+
+ ![screenshots](screenshots/23.png)
+
+ ![screenshots](screenshots/23.png)
+
+ ![screenshots](screenshots/23.png)
+
 ### 5. Delete resource group through CLI
 ```
 az group delete -n rg-test1 --yes --no-wait
 ```
 ![screenshots](screenshots/17.png)
+
+Delete resource group through Azure portal:
+
+![screenshots](screenshots/27.png)
+
+![screenshots](screenshots/28.png)
+
+![screenshots](screenshots/29.png)
+
+![screenshots](screenshots/30.png)
+
+![screenshots](screenshots/31.png)
+
+![screenshots](screenshots/32.png)
+
 
 ### 6. Delete with a loop
 ```
