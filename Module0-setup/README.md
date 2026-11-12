@@ -19,21 +19,21 @@ Checked my subscription offer and credit expiry date: Free trial
 ### 2. Budget alert
 Created a budget called `budget-portfolio` of $1 with alerts at 50%, 80%, and 100%.
 
-![Budget](screenshots/03-budget-created.png)
+![screenshots](screenshots/1.png)
 
 ### 3. Cloud Shell (Bash)
 Opened Cloud Shell in Bash and confirmed I was signed in:
 ```
 az account show -o table
 ```
-![Cloud Shell](screenshots/04-cloud-shell-bash.png)
+![screenshots](screenshots/1.png)
 
 ### 4. Create and tag a resource group
 ```
 az group create -n rg-test2 -l canadacentral --tags purpose=portfolio module=0
 az group show -n rg-test2 -o table
 ```
-![Create group](screenshots/05-cli-group-create-tags.png)
+![screenshots](screenshots/1.png)
 
 ### 5. Delete resource group through CLI
 ```
@@ -46,7 +46,7 @@ az group delete -n rg-test1 --yes --no-wait
 for g in $(az group list --query "[?starts_with(name,'rg-test')].name" -o tsv); do az group delete -n $g --yes --no-wait; done 
 az group list -o table
 ```
-![Loop delete](screenshots/07-bash-loop-delete.png)
+![screenshots](screenshots/1.png)
 
 ## Troubleshooting log
 
@@ -61,6 +61,8 @@ How I Found : Ran az account list-locations -o table and compared the spelling
 
 Fix : Used correct spelling - canadacentral 
 
+![screenshots](screenshots/1.png)
+
 2.
 What I did :Created rg-test1 in canadacentral, then again in eastus 
 
@@ -71,6 +73,8 @@ Cause : A resource group’s region can’t be changed
 How I Found : Ran az group show -n rg-test1 -o table and saw the original region  
 
 Fix : Reused canadacentral, or deleted the group and recreated it 
+
+![screenshots](screenshots/1.png)
 
 3.
 What I did : Deleted rg_test 
@@ -83,6 +87,8 @@ How I Found : Ran az group list -o table and compared names
 
 Fix : Used the exact name from the list and delete it 
 
+![screenshots](screenshots/1.png)
+
 4.
 What I did : Added a CanNotDelete lock, then tried to delete rg-test1 
 
@@ -94,7 +100,8 @@ How I Found : Ran az lock list -g rg-test1 -o table and saw the lock
 
 Fix : Ran az lock delete --name lock-test --resource-group rg-test1, then deleted the group 
 
-Screenshots: ![Error 1](screenshots/09-error1-notfound.png) ![Error 2](screenshots/10-error2-bad-region.png) ![Error 3](screenshots/11-error3-region-conflict.png) ![Error 4](screenshots/12-error4-wrong-subscription.png) ![Error 5](screenshots/13-error5-lock-blocked.png) ![Fix 5](screenshots/14-error5-lock-fixed.png)
+![screenshots](screenshots/1.png)
+
 
 ## What I learned
 - The Azure hierarchy is management group, subscription, resource group, resource.
@@ -104,5 +111,5 @@ Screenshots: ![Error 1](screenshots/09-error1-notfound.png) ![Error 2](screensho
 ## Cleanup
 Deleted all test resource groups. Cost shown afterward: 
 
-![Cost](screenshots/15-cost-analysis-final.png)
+![screenshots](screenshots/1.png)
 
