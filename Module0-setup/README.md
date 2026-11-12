@@ -106,6 +106,11 @@ az group list -o table
 ```
 ![screenshots](screenshots/18.png)
 
+If three groups have other names, list them explicitly: 
+```
+for g in rg-name1 rg-name2 rg-name3; do az group delete -n $g --yes --no-wait; done
+```
+
 ## Troubleshooting log
 
 1. 
@@ -113,7 +118,7 @@ What I did : Created a group in canadcentral
 
 Error : (LocationNotAvailableForResourceGroup) The provided location 'canadcentral' is not available for resource group. 
 
-Cause : Typ error in the region name 
+Cause : Type error in the region name 
 
 How I Found : Ran az account list-locations -o table and compared the spelling 
 
@@ -183,6 +188,7 @@ Resource group ab deleted successfully:
 - The Azure hierarchy is management group, subscription, resource group, resource.
 - Budgets only warn. Deleting or deallocating resources is what actually controls cost.
 - Most errors name the problem. Checking names, region, subscription, and locks solves most of them.
+- Uses -o tsv because it produces plain-text output without table formatting, making it easier to capture and process        values in shell scripts and loops.
 
 ## Cleanup
 Deleted all test resource groups. Cost shown afterward: 
@@ -190,4 +196,8 @@ Deleted all test resource groups. Cost shown afterward:
 ![screenshots](screenshots/25.png)
 
 ![screenshots](screenshots/26.png)
+
+A resource group is only a container, like an empty folder, and Azure doesn’t charge for it. Charges come from the resources inside it, such as VMs, disks, storage, databases, and public IPs, and you haven’t created any of those yet. 
+
+Cloud Shell in ephemeral mode doesn’t use a storage account either, so there’s no cost there. 
 
