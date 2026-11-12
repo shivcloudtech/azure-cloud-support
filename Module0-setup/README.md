@@ -14,7 +14,7 @@ Set up an Azure subscription with cost guardrails, and practice creating, taggin
 ### 1. Subscription and credit
 Checked my subscription offer and credit expiry date: Free trial
 
-![Subscription](screenshots/01-subscription-overview.png)
+![Module0-setup](Module-0/screenshots/1.png)
 
 ### 2. Budget alert
 Created a budget called `budget-portfolio` of $1 with alerts at 50%, 80%, and 100%.
