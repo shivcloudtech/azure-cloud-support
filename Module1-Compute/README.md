@@ -2,7 +2,7 @@ Module 1: Compute
 ## Goal
 Create, connect to, and troubleshoot Linux and Windows virtual machines in Azure using the portal and Azure CLI (Bash), including disks and snapshots.
 ## What I built
-- Ubuntu VM via the portal (SSH key, auto-shutdown)
+- Ubuntu VM via the portal (password authentication, auto-shutdown)
 - Ubuntu VM via Azure CLI with nginx and an open port 80
 - A Windows Server VM reached over RDP
 - A data disk (attached, formatted, mounted) and an OS disk snapshot
@@ -40,12 +40,22 @@ serial console is how you reach a VM when SSH or networking is broken.
 Connect it from your own computer's terminal using Windows Powershell:-
 ![screenshots](screenshots/20.png)
 
+If want to connect to RDP:-
 Add inbound security rule for RDP service:-
 ![screenshots](screenshots/21.png)
 ![screenshots](screenshots/22.png)
 
+Test whether port 3389 is reachable:-
+Open Windows PowerShell
+Run command
+Test-NetConnection YOUR_PUBLIC_IP -Port 3389
+If fails, check network watcher.
+
 Network Watcher:-
-Verify if RDP server has access allowed through IP flow verify
+1. Search for Network Watcher in Azure Portal.
+2. Select IP flow verify.
+It will tell you whether the NSG allows or denies the connection.
+Allow means : This means Azure's Network Security Group rules are allowing the RDP traffic.
 ![screenshots](screenshots/network_watcher_to_verify_RDP.png)
 ![screenshots](screenshots/network_watcher_verified_RDP.png)
 
