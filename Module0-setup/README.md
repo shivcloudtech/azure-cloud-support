@@ -16,37 +16,64 @@ Checked my subscription offer and credit expiry date: Free trial
 
 ![screenshots](screenshots/1.png)
 
-### 2. Budget alert
+![screenshots](screenshots/2.png)
+
+![screenshots](screenshots/3.png)
+
+### 2. Budget alert and cost analysis
 Created a budget called `budget-portfolio` of $1 with alerts at 50%, 80%, and 100%.
 
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/4.png)
+
+![screenshots](screenshots/5.png)
+
+![screenshots](screenshots/6.png)
+
+![screenshots](screenshots/7.png)
+
+Search cost analysis and set the scope:-
+
+![screenshots](screenshots/8.png)
+
+![screenshots](screenshots/9.png)
+
+![screenshots](screenshots/10.png)
+
+![screenshots](screenshots/11.png)
+
+![screenshots](screenshots/12.png)
+
+![screenshots](screenshots/13.png)
 
 ### 3. Cloud Shell (Bash)
 Opened Cloud Shell in Bash and confirmed I was signed in:
 ```
 az account show -o table
 ```
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/14.png)
+
+List subscriptions and resource groups:
+![screenshots](screenshots/15.png)
 
 ### 4. Create and tag a resource group
 ```
 az group create -n rg-test2 -l canadacentral --tags purpose=portfolio module=0
 az group show -n rg-test2 -o table
 ```
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/23.png)
 
 ### 5. Delete resource group through CLI
 ```
 az group delete -n rg-test1 --yes --no-wait
 ```
-
+![screenshots](screenshots/17.png)
 
 ### 6. Delete with a loop
 ```
 for g in $(az group list --query "[?starts_with(name,'rg-test')].name" -o tsv); do az group delete -n $g --yes --no-wait; done 
 az group list -o table
 ```
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/18.png)
 
 ## Troubleshooting log
 
@@ -61,7 +88,9 @@ How I Found : Ran az account list-locations -o table and compared the spelling
 
 Fix : Used correct spelling - canadacentral 
 
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/16.png)
+
+![screenshots](screenshots/19.png)
 
 2.
 What I did :Created rg-test1 in canadacentral, then again in eastus 
@@ -74,7 +103,7 @@ How I Found : Ran az group show -n rg-test1 -o table and saw the original region
 
 Fix : Reused canadacentral, or deleted the group and recreated it 
 
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/20.png)
 
 3.
 What I did : Deleted rg_test 
@@ -87,7 +116,7 @@ How I Found : Ran az group list -o table and compared names
 
 Fix : Used the exact name from the list and delete it 
 
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/21.png)
 
 4.
 What I did : Added a CanNotDelete lock, then tried to delete rg-test1 
@@ -100,7 +129,7 @@ How I Found : Ran az lock list -g rg-test1 -o table and saw the lock
 
 Fix : Ran az lock delete --name lock-test --resource-group rg-test1, then deleted the group 
 
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/22.png)
 
 
 ## What I learned
@@ -111,5 +140,5 @@ Fix : Ran az lock delete --name lock-test --resource-group rg-test1, then delete
 ## Cleanup
 Deleted all test resource groups. Cost shown afterward: 
 
-![screenshots](screenshots/1.png)
+![screenshots](screenshots/25.png)
 
