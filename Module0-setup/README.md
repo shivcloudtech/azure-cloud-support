@@ -90,8 +90,6 @@ Fix : Used correct spelling - canadacentral
 
 ![screenshots](screenshots/16.png)
 
-![screenshots](screenshots/19.png)
-
 2.
 What I did :Created rg-test1 in canadacentral, then again in eastus 
 
