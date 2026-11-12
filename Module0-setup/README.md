@@ -140,3 +140,5 @@ Deleted all test resource groups. Cost shown afterward:
 
 ![screenshots](screenshots/25.png)
 
+![screenshots](screenshots/26.png)
+
