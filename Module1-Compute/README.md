@@ -138,8 +138,44 @@ Here public key is stored.
 First give permission to private key to access and then login to VM server.
 ![screenshots](screenshots/SSH8.png)
 
+###How to generate key pair:
 
+Generate key-pair can be done in any terminal like Windows Powershell, Azure cloud shell.
+Creation in windows Powershell.
+Create file path and key-pair:
+![screenshots](screenshots/SSH9_generate key pair.png)
 
+Login to VM:
+
+![screenshots](screenshots/SSH10_login_to_vm.png)
+
+Update Public key:
+Because i have generated new key pair.
+
+![screenshots](screenshots/SSH11_update_public_key.png)
+
+Note: Reset password can be done in many cases:
+1. You forget your VM password.
+2. You lose your private key.(In that case you need to generate public and private key again and update both).
+3. You need to reset any configuration.
+4. You want to opt for password authentication instead of SSH keys.
+
+Upload Private key:
+Open file explorer:
+
+![screenshots](screenshots/SSH12_openFileExplorer.png)
+
+Make directory of .ssh(if not have already) and give permissions.
+![screenshots](screenshots/SSH13_uploadPrivateKey.png)
+
+Move private key into .ssh folder and give permissions.
+Login to VM server
+![screenshots](screenshots/SSH14_logintoVMthroughCloudShell.png)
+
+Creation in cloud shell:
+Same procedure to follow.
+
+![screenshots](screenshots/SSH14_generateKeyPairThroughCloudShellAndLoginToVM.png)
 
 
 ### Disks and snapshot
