@@ -9,6 +9,7 @@ Create, connect to, and troubleshoot Linux and Windows virtual machines in Azure
 - VM lifecycle operations: stop, deallocate, start, resize, run-command
 ## Steps
 ### Portal VM
+
 ![screenshots](screenshots/1.png)
 ![screenshots](screenshots/2.png)
 ![screenshots](screenshots/3.png)
@@ -26,14 +27,17 @@ Create, connect to, and troubleshoot Linux and Windows virtual machines in Azure
 ![screenshots](screenshots/15.png)
 
 Verify Azure VM connection in cloud shell(Bash):-
+
 ![screenshots](screenshots/16.png)
 ![screenshots](screenshots/17.png)
 
 Verify connection through Run command:-
+
 ![screenshots](screenshots/18.png)
 Run Commands runs a command on the VM without connecting.
 
 Verify connection through serial console:-
+
 ![screenshots](screenshots/19.png)
 serial console is how you reach a VM when SSH or networking is broken.
 
@@ -43,22 +47,33 @@ Connect it from your own computer's terminal using Windows Powershell:-
 
 ### CLI VM
 Create VM:
+
 ![screenshots](screenshots/23.png)
 
 VM list:
+
 ![screenshots](screenshots/24.png)
 
 Test Connection:
+
 ![screenshots](screenshots/25.png)
 ![screenshots](screenshots/26.png)
 ![screenshots](screenshots/27.png)
 
-Install NGINX:
+Install Nginx using Azure Cloud Shell:
 
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/28.png)
 
 Create inbound port rule to allow HTTP server connection through external browser:
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/29.png)
+
 
 
 ### Windows VM
