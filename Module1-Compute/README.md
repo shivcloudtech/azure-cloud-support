@@ -42,13 +42,38 @@ Connect it from your own computer's terminal using Windows Powershell:-
 
 
 ### CLI VM
-Script: [create-linux-vm.sh](scripts/create-linux-vm.sh)
-![CLI create](screenshots/04-cli-vm-create.png)
-![VM list](screenshots/05-vm-list-status.png)
-![Inspection](screenshots/06-linux-inspection.png)
-![nginx](screenshots/07-nginx-browser.png)
+Create VM:
+![screenshots](screenshots/23.png)
+
+VM list:
+![screenshots](screenshots/24.png)
+
+Test Connection:
+![screenshots](screenshots/25.png)
+![screenshots](screenshots/26.png)
+![screenshots](screenshots/27.png)
+
+Install NGINX:
+
+
+Create inbound port rule to allow HTTP server connection through external browser:
+![screenshots](screenshots/28.png)
+![screenshots](screenshots/29.png)
+
+
 ### Windows VM
-![RDP](screenshots/08-windows-rdp.png)
+
+Create Windows VM:
+![screenshots](screenshots/winVM.png)
+
+Connect through RDP:
+![screenshots](screenshots/winVM1.png)
+
+Open powershell inside VM and test host:
+![screenshots](screenshots/winVM2.png)
+
+
+
 ### Disks and snapshot
 ![Data disk](screenshots/09-data-disk-mounted.png)
 ![Snapshot](screenshots/10-snapshot.png)
