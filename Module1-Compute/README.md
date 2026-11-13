@@ -40,24 +40,6 @@ serial console is how you reach a VM when SSH or networking is broken.
 Connect it from your own computer's terminal using Windows Powershell:-
 ![screenshots](screenshots/20.png)
 
-If want to connect to RDP:-
-Add inbound security rule for RDP service:-
-![screenshots](screenshots/21.png)
-![screenshots](screenshots/22.png)
-
-Test whether port 3389 is reachable:-
-Open Windows PowerShell
-Run command
-Test-NetConnection YOUR_PUBLIC_IP -Port 3389
-If fails, check network watcher.
-
-Network Watcher:-
-1. Search for Network Watcher in Azure Portal.
-2. Select IP flow verify.
-It will tell you whether the NSG allows or denies the connection.
-Allow means : This means Azure's Network Security Group rules are allowing the RDP traffic.
-![screenshots](screenshots/network_watcher_to_verify_RDP.png)
-![screenshots](screenshots/network_watcher_verified_RDP.png)
 
 ### CLI VM
 Script: [create-linux-vm.sh](scripts/create-linux-vm.sh)
