@@ -62,19 +62,48 @@ Test Connection:
 
 Install Nginx using Azure Cloud Shell:
 
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
-![screenshots](screenshots/28.png)
+Login to VM server:
 
-Create inbound port rule to allow HTTP server connection through external browser:
+![screenshots](screenshots/Ng1.png)
 
+Update Ubuntu server:
 
+![screenshots](screenshots/ng2.png)
+
+Install Nginx:
+
+![screenshots](screenshots/ng3.png)
+
+Start, Enable Nginx and check status:
+
+![screenshots](screenshots/ng4.png)
+
+Test locally to see HTML output:
+
+![screenshots](screenshots/ng5.png)
+
+Curl public Ip:
+
+![screenshots](screenshots/ng6.png)
+Failed because Ubuntu VM cannot establish a connection to public IP on port 80.
+
+Check whether Nginx listens on port 80:
+
+![screenshots](screenshots/ng7.png)
+This means Nginx is listening for incoming HTTP connections.
+
+Add Azure firewall settings for TCP port 80:
+
+![screenshots](screenshots/ng8_allowport80.png)
+![screenshots](screenshots/ng9.png)
+
+Tests access through the VM's public IP:-
+
+![screenshots](screenshots/ng10.png)
+
+Check IP in browser:
+
+![screenshots](screenshots/ng11.png)
 
 ### Windows VM
 
