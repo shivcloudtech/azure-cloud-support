@@ -60,7 +60,7 @@ Test Connection:
 ![screenshots](screenshots/26.png)
 ![screenshots](screenshots/27.png)
 
-Install Nginx using Azure Cloud Shell:
+### Install Nginx using Azure Cloud Shell:
 
 Login to VM server:
 
@@ -115,6 +115,8 @@ Connect through RDP:
 
 Open powershell inside VM and test host:
 ![screenshots](screenshots/winVM2.png)
+
+### SSH KEYS
 
 ###How to find SSH Keys in Azure Portal:
 
