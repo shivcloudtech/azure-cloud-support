@@ -116,6 +116,30 @@ Connect through RDP:
 Open powershell inside VM and test host:
 ![screenshots](screenshots/winVM2.png)
 
+###How to find SSH Keys in Azure Portal:
+
+![screenshots](screenshots/SSH1.png)
+![screenshots](screenshots/SSH2.png)
+![screenshots](screenshots/SSH3.png)
+Here public key is stored.
+
+###How to find SSH Keys in Azure CLI:
+
+![screenshots](screenshots/SSH4.png)
+
+###How to upload private SSH Key in Azure CLI:
+
+![screenshots](screenshots/SSH5.png)
+![screenshots](screenshots/SSH6.png)
+![screenshots](screenshots/SSH7.png)
+
+###How to login to VM server in Azure CLI:
+
+First give permission to private key to access and then login to VM server.
+![screenshots](screenshots/SSH8.png)
+
+
+
 
 
 ### Disks and snapshot
